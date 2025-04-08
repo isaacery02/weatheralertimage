@@ -85,7 +85,7 @@ def send_email(user: str, password: str, to_email: str, subject: str, content: s
 # --- Azure Function ---
 @app.function_name(name="weatherNotifier")
 @app.timer_trigger(
-    schedule="0 * * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False
+    schedule="0 7 * * *", arg_name="myTimer", run_on_startup=False, use_monitor=False
 )
 def WeatherAlert(myTimer: func.TimerRequest) -> None:
     """
