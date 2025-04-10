@@ -1,0 +1,5 @@
+# weather_cron
+# Minute Hour DayOfMonth Month DayOfWeek Command
+# Run at 7:00 AM UTC every day
+# Use full paths. Redirect stdout/stderr to Docker logs and a log file inside container.
+*/5 * * * * root    /usr/local/bin/python /app/weather_notifier.py >> /var/log/cron.log 2>&1

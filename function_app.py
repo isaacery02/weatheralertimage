@@ -134,7 +134,7 @@ def send_email_with_images(
 @app.timer_trigger(
     schedule="0 0 7 * * *", # Runs at 7:00 AM UTC every day
     arg_name="myTimer",
-    run_on_startup=False,
+    run_on_startup=True,
     use_monitor=False
 )
 def WeatherAlert(myTimer: func.TimerRequest) -> None:
