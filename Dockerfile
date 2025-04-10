@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Install cron
 # Install cron, procps (for ps), and vim (for vi)
-RUN apt-get update && apt-get install -y --no-install-recommends cron vim procps && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends cron vim && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first, install Python dependencies
 COPY requirements.txt .
